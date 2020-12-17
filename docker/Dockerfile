@@ -13,7 +13,7 @@ COPY resources /build/resources
 
 RUN lein metajar
 
-FROM gcr.io/atomist-container-registry/java-atomist:0.13.0-20191119164121
+FROM gcr.io/personalsdm-216019/java-atomist:0.13.0-20191119164121
 
 MAINTAINER Jim Clark <jim@atomist.com>
 
