@@ -1,7 +1,6 @@
 (ns atomist.main
   (:require [ring.adapter.jetty :refer [run-jetty]])
-  (:gen-class)
-  )
+  (:gen-class))
 
 (defn handler [_]
   {:status 200
