@@ -9,7 +9,6 @@ WORKDIR /build
 
 COPY project.clj /build
 COPY src /build/src
-COPY resources /build/resources
 
 RUN lein metajar
 
