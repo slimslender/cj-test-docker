@@ -5,7 +5,8 @@
 (defn handler [_]
   {:status 200
    :headers {"Content-Type" "text/html"}
-   :body "Helloo123456789012345678901234"})
+   :body (-> {"version": 2}
+             (str))})
 
 (defn -main [& args]
   (run-jetty handler {:port 4000}))
