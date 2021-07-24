@@ -1,4 +1,4 @@
-FROM clojure:lein AS builder
+FROM clojure:lein@sha256:98f462c0f46a3e7b7661c8b761904c76fc51146f6c48077c22bd7e1a138a7b7f AS builder
 
 ARG MVN_ARTIFACTORYMAVENREPOSITORY_USER
 ARG MVN_ARTIFACTORYMAVENREPOSITORY_PWD
@@ -12,7 +12,7 @@ COPY src /build/src
 
 RUN lein metajar
 
-FROM gcr.io/personalsdm-216019/java-atomist:0.13.0-20191119164121
+FROM gcr.io/personalsdm-216019/java-atomist:0.13.0-20191119164121@sha256:60d43b18bb8d86f2906f8a01a51a95dd4a7115ff35a6c921ef1f5b65783d97bd
 
 MAINTAINER Jim Clark <jim@atomist.com>
 
